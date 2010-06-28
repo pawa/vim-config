@@ -176,10 +176,12 @@ if has("gui_running")
 
   set nu
 else
-  colorscheme zellner
+  "colorscheme zellner
+  "colorscheme torte
+  colorscheme darkblue
   set background=dark
   
-  set nonu
+  set nu
 endif
 
 set encoding=utf8
@@ -571,3 +573,12 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 "Quickly open a buffer for scripbble
 map <leader>q :e ~/buffer<cr>
+
+
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "normal g`\"" |
+\ endif
