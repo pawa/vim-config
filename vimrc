@@ -104,7 +104,8 @@ endfunction
 
 "Remap the tab key to select action with InsertTabWrapper
 inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
-noremap <F2> :tabn<cr> 
+noremap <F2> :tabp<cr> 
+noremap <F3> :tabn<cr> 
 
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
