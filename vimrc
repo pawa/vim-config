@@ -72,8 +72,11 @@ else
 endif " has("autocmd")
 
 "set autoindent		" always set autoindenting on
-set ts=2
-set sw=2
+set ts=4
+set shiftwidth=4
+set encoding=utf8
+"set ts=2
+"set sw=2
 set et
 set sta
 set mouse=a
